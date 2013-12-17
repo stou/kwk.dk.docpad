@@ -2,6 +2,10 @@
 # It is simply a CoffeeScript Object which is parsed by CSON
 docpadConfig = {
 
+	# Render Passes
+    # How many times should we render documents that reference other documents?
+    renderPasses: 2  # default
+
 	# =================================
 	# Template Data
 	# These are variables that will be accessible via our templates
