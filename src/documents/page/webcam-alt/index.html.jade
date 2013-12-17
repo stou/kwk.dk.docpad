@@ -1,19 +1,20 @@
 ---
 layout: default
 ---
-	.row
-		.span12
-			h1 Næsten Live webcam
-				small Opdaterer ca. hvert andet sekund
-			img#camera(alt="Webcam fra klubhuset", src="http://kwkcam.herokuapp.com/camera")
+
+.row
+	.span12
+		h1 Næsten Live webcam
+			small Opdaterer ca. hvert andet sekund
+		img#camera(alt="Webcam fra klubhuset", src="http://kwkcam.herokuapp.com/camera")
 
 block scripts-extras
-	script
+	script.
 		$(document).ready(function() {
 			// Active camera will refresh every 2 seconds
 			var TIMEOUT = 2000;
 			var refreshInterval = setInterval(function() {
 				var random = Math.floor(Math.random() * Math.pow(2, 31));
 				$('img#camera').attr('src', 'http://kwkcam.herokuapp.com/camera?i=' + Math.random());
-			}, TIMEOUT);  
+			}, TIMEOUT);
 		});
