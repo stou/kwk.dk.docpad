@@ -1,0 +1,74 @@
+@import "bootstrap/bootstrap.less";
+
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  // background: white url('/images/bs.png');
+  background: white url('/images/bg-main-surf-3cm.png') left repeat-y;
+  height: 100%;
+}
+
+
+@import "bootstrap/responsive.less";
+
+
+/* ===== Primary Styles ========================================================
+   Author:
+   ========================================================================== */
+
+
+#home-hero-box {
+	background-color: @blue;
+	// .opacity(50);
+//	#translucent > .background();
+	#gradient > .horizontal(@blue, @green);
+//	.box-shadow(20px 20px 5px #888);
+}
+
+.thumbnail {
+	background-color: white;
+	.frontpage-boxes {
+		height: 270px;
+	}
+}
+
+.footer {
+	margin-top: 1em;
+	background-color: @grayLight;
+	border: 1px solid @gray;
+	.border-radius(5px);
+    address {
+    	margin: 1em;
+//    	color: @grayLighter;
+    }
+}
+
+/*
+// TODO: make the footer work
+// http://ryanfait.com/resources/footer-stick-to-bottom-of-page/
+
+html, body {
+  height: 100%;
+}
+
+.container {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -10em;
+}
+
+.footer, .push {
+    clear: both;
+}
+
+.footer, .push {
+	background-color: @gray;
+    height: 10em;
+    address {
+    	margin: 1em;
+    	color: @grayLighter;
+    }
+}
+
+*/
