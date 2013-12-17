@@ -8,32 +8,31 @@ html
 		meta(name="description", content="")
 		meta(name="author", content="")
 
-		block head-links
-			// Le styles 
-			link(rel='stylesheet', href='/css/style.css')
-			link(href="/js/google-code-prettify/prettify.css", rel="stylesheet")
+		// Le styles 
+		link(rel='stylesheet', href='/css/style.css')
+		link(href="/js/google-code-prettify/prettify.css", rel="stylesheet")
 
-			// Le HTML5 shim, for IE6-8 support of HTML5 elements 
-			//if lt IE 9
-				script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+		// Le HTML5 shim, for IE6-8 support of HTML5 elements 
+		//if lt IE 9
+			script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
 
-			// Le fav and touch icons
-			link(rel="shortcut icon", href="assets/ico/favicon.ico")
-			link(rel="apple-touch-icon", href="assets/ico/apple-touch-icon.png")
-			link(rel="apple-touch-icon", sizes="72x72", href="assets/ico/apple-touch-icon-72x72.png")
-			link(rel="apple-touch-icon", sizes="114x114", href="assets/ico/apple-touch-icon-114x114.png")
-			link(href="/css/jquery.googleslides.css", rel="stylesheet")
+		// Le fav and touch icons
+		link(rel="shortcut icon", href="assets/ico/favicon.ico")
+		link(rel="apple-touch-icon", href="assets/ico/apple-touch-icon.png")
+		link(rel="apple-touch-icon", sizes="72x72", href="assets/ico/apple-touch-icon-72x72.png")
+		link(rel="apple-touch-icon", sizes="114x114", href="assets/ico/apple-touch-icon-114x114.png")
+		link(href="/css/jquery.googleslides.css", rel="stylesheet")
 
-			script.
-				var _gaq = _gaq || [];
-				_gaq.push(['_setAccount', 'UA-24508798-2']);
-				_gaq.push(['_trackPageview']);
-				
-				(function() {
-					var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-				})();
+		script.
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-24508798-2']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
 
 	body(data-spy="scroll", data-target=".subnav", data-offset="50")
 
@@ -73,81 +72,71 @@ html
 			#main-content-wrapper.row.span12
 				!= content
 				
-				footer.footer
-					.row
-						.span6
-							address.kwk-address
-								strong Kolding Windsurfing Klub
-								br
-								| Stranden 63, Rebæk
-								br
-								| 6000 Kolding
+			.row.span12
+				.footer
+					.well
+						address.kwk-address
+							strong Kolding Windsurfing Klub
+							br
+							| Stranden 63, Rebæk
+							br
+							| 6000 Kolding
 
 
-		block scripts
-			// Le javascript. Placed at the end of the document so the pages load faster 
-			script(src="http://platform.twitter.com/widgets.js")
-			script(src="/js/jquery.js")
-			script(src="/js/google-code-prettify/prettify.js")
-			script(src="/js/bootstrap-transition.js")
-			script(src="/js/bootstrap-alert.js")
-			script(src="/js/bootstrap-modal.js")
-			script(src="/js/bootstrap-dropdown.js")
-			script(src="/js/bootstrap-scrollspy.js")
-			script(src="/js/bootstrap-tab.js")
-			script(src="/js/bootstrap-tooltip.js")
-			script.
-				$(document).ready(function () {
-					$("[rel=tooltip]").tooltip();
-				});
+		// Le javascript. Placed at the end of the document so the pages load faster 
+		script(src="http://platform.twitter.com/widgets.js")
+		script(src="/js/jquery.js")
+		script(src="/js/google-code-prettify/prettify.js")
+		script(src="/js/bootstrap-transition.js")
+		script(src="/js/bootstrap-alert.js")
+		script(src="/js/bootstrap-modal.js")
+		script(src="/js/bootstrap-dropdown.js")
+		script(src="/js/bootstrap-scrollspy.js")
+		script(src="/js/bootstrap-tab.js")
+		script(src="/js/bootstrap-tooltip.js")
+		script.
+			$(document).ready(function () {
+				$("[rel=tooltip]").tooltip();
+			});
 
-				$(document).ready(function () {
-					$("[rel=popover]").popover({placement: "top"});
-				});
+			$(document).ready(function () {
+				$("[rel=popover]").popover({placement: "top"});
+			});
 
-			script(src="/js/bootstrap-popover.js")
-			script(src="/js/bootstrap-button.js")
-			script(src="/js/bootstrap-collapse.js")
-			script(src="/js/bootstrap-carousel.js")
-			script(src="/js/bootstrap-typeahead.js")
-			script(src="/js/application.js")
+		script(src="/js/bootstrap-popover.js")
+		script(src="/js/bootstrap-button.js")
+		script(src="/js/bootstrap-collapse.js")
+		script(src="/js/bootstrap-carousel.js")
+		script(src="/js/bootstrap-typeahead.js")
+		script(src="/js/application.js")
 
-			// TODO keep track of current navigation item
-			script.
-				$(document).ready(function () {
-					$("#mainNavigation ul.nav > li a[href='#{navItem}']").parent().addClass("active");
-				});
+		// TODO keep track of current navigation item
+		script.
+			$(document).ready(function () {
+				$("#mainNavigation ul.nav > li a[href='#{navItem}']").parent().addClass("active");
+			});
 
-				$(function () {
-					var activeTab = $('li > a[href=' + location.hash + ']');
-					activeTab && activeTab.tab('show');
-				});
+			$(function () {
+				var activeTab = $('li > a[href=' + location.hash + ']');
+				activeTab && activeTab.tab('show');
+			});
 
-			//- handle google slideshows
-			script(src="/js/jquery.googleslides.js")
-			script.
-				$(document).ready(function () {
-					var element = $('.slideshow').each(function(){
-						$(this).googleslides({
-							userid:'109722236261114406275', 
-							albumid: $(this).attr("id"),
-							time: 4000,
-							fadespeed: 700,
-							caption: true,
-							random: true
-						});
-						
+		//- handle google slideshows
+		script(src="/js/jquery.googleslides.js")
+		script.
+			$(document).ready(function () {
+				var element = $('.slideshow').each(function(){
+					$(this).googleslides({
+						userid:'109722236261114406275', 
+						albumid: $(this).attr("id"),
+						time: 4000,
+						fadespeed: 700,
+						caption: true,
+						random: true
 					});
+					
 				});
-			script.
-				$(document).ready(function() {
-					// Active camera will refresh every 2 seconds
-					var TIMEOUT = 2000;
-					var refreshInterval = setInterval(function() {
-						var random = Math.floor(Math.random() * Math.pow(2, 31));
-						$('img#camera').attr('src', 'http://kwkcam.herokuapp.com/camera?i=' + Math.random());
-					}, TIMEOUT);
-				});
+			});
 
-
+		!= getBlock('scripts').add(site.scripts, {defer:false}).add(document.scriptExtra, {defer:false}).toHTML()
 
