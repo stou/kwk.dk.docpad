@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+.row
+  .span12
+    .page-header
+      h1= title
+
+    p På denne side finder du nogle udvalgte prognoser og målinger. Der er mange flere detaljer på
+
+    ul
+      li: a(href="http://dmi.dk") DMI's hjemmeside
+      li: a(href="http://ifm.fcoo.dk", title="Sejladsudsigt - Forsvarets Center for Operativ Oceanografi") Sejladsudsigt fra Forsvarets Center for Operativ Oceanografi
+
+    ul.nav.nav-pills
+      li.active: a(href="#weather-dmi", data-toggle="tab") DMI
+      li: a(href="#weather-wind-frv", data-toggle="tab") FRV Lillebælt
+      li: a(href="#weather-water-level", data-toggle="tab") Vandstand Kolding
+
+    .tab-content
+      #weather-dmi.tab-pane.active
+        .row
+          .span6
+            h3 Vindmåling fra Kolding windsurfing klubs vejrstation
+            p 
+              a(href="http://www.dmi.dk/dmi/index/danmark/borgervejr.htm?stat=1627&map=map13&param=undefined",
+                  title="Kolding windsurfing klub på DMI Borgervejr")
+                img(src="http://servlet.dmi.dk/bv/servlet/bvImage?stat=1627&param=wind",
+                  title="Vindmåling fra Kolding windsurfing klubs vejrstation")
+
+          .span6
+            h3 DMI's 5 døgns prognose for Syd- og Sønderjylland
+            p
+              a(href="http://www.dmi.dk/vejr/til-lands/regionaludsigten/ssjylland/", title="DMI vejrudsigt for Syd- og Sønderjylland")
+                img(src="http://www.dmi.dk/uploads/tx_dmidatastore/webservice/d/n/a/l/l/femdgn_sydjylland.png", title="Femdøgns prognose fra dmi")
+
+
+      #weather-wind-frv.tab-pane
+        h3 Vindprognose for Lillebælt for de næste 8 timer
+        p
+        <iframe width="614" height="700" scrolling="no" frameborder="0" id="394450955" name="394450955" allowtransparency="true" class="igm" src="//mj89sp3sau2k7lj1eg3k40hkeppguj6j-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=http://www.gstatic.com/sites-gadgets/iframe/iframe.xml&amp;container=enterprise&amp;view=default&amp;lang=da&amp;country=ALL&amp;sanitize=0&amp;v=236b9101d727f0e2&amp;libs=core&amp;parent=http://new.kwk.dk/vejr#up_scroll=no&amp;up_iframeURL=http://ifm.fcoo.dk/asp/oceanIFrame.asp?charttype%3D8%26id%3DSMALL_BELT%26paramId1%3DWSpd%26user1%3DDEFAULT%26paramId2%3DWDir%26user2%3DDEFAULT%26paramId3%3DNONE%26user3%3DDEFAULT%26time%3D0%26animation%3D8%26speed%3D1%26legend%3D1%26header%3D1%26lang%3DDK&amp;st=e%3DAIHE3cBp8N05tFa%252BQtBlyKDL5YY9k4TbDJ4njR6I7vYslWl%252BTLlgQQl2ZyzQBvxpM8eLEATZXbmFClfAov%252BOqkES6%252BqY%252FCvY4sq3Jcn1lhiJIbOPCQKJVYIoM1ymwiExTG0YpzJfYvqv%26c%3Denterprise&amp;rpctoken=-7907650211126501555"></iframe>
+      
+      #weather-water-level.tab-pane
+            h3 Vandstand Kolding havn
+            p
+              <iframe width="600" height="400" scrolling="no" frameborder="0" id="1880107097" name="1880107097" allowtransparency="true" class="igm" src="//mj89sp3sau2k7lj1eg3k40hkeppguj6j-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=http://www.gstatic.com/sites-gadgets/iframe/iframe.xml&amp;container=enterprise&amp;view=default&amp;lang=da&amp;country=ALL&amp;sanitize=0&amp;v=236b9101d727f0e2&amp;libs=core&amp;parent=http://new.kwk.dk/vejr#up_scroll=no&amp;up_iframeURL=http://ifm.fcoo.dk/asp/oceanIFrame.asp?charttype%3D1%26paramId%3DSeaLvl%26user%3DWARNING_LOW_SEALEVEL_SOUND%26hindcastPeriod%3D24%26forecastMode%3D1%26forecastPeriod%3D48%26infobox%3D1%26mode%3D1%26width%3D600%26height%3D400%26header%3D1%26lang%3DDK%26id%3DKOLDING&amp;st=e%3DAIHE3cB6jIVacuzDq2no%252ButPDM7iP9MuCWqLVfCf%252FnlKCcQkJlpFsNu%252B3%252BG8Ht%252BySq0322Ak3meSulGBscZjNMaW0uVUGMQ1tSFWYRQOifrMgWDXKCyjwU74LPNA15XL69LEJbRzKo7q%26c%3Denterprise&amp;rpctoken=-7907650211126501555"></iframe>
+

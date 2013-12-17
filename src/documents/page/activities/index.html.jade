@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+.row
+	.span12
+		ul.nav.nav-pills
+			li.active: a(href="#tab-surfskolen", data-toggle="tab") Surfskolen
+			li: a(href="#tab-klubliv", data-toggle="tab") Klubliv
+			li: a(href="#tab-arrangementer", data-toggle="tab") Arrangementer
+
+		.tab-content
+			#tab-surfskolen.tab-pane.active
+				!= include('./_surfskole')
+
+			#tab-klubliv.tab-pane
+				!= include('./_klubliv')
+			#tab-arrangementer.tab-pane
+				!= include('./_arrangementer')

@@ -1,0 +1,148 @@
+---
+layout: default
+---
+
+//- TODO create a nice image header for the frontpage
+//- .hero-unit(style="background-image: url(/images/kwk_header.png); background-repeat: no-repeat; color: white;")
+//-   h1(style="color: white;") Kolding Windsurfing Klub
+#home-hero-box.hero-unit
+	h1 Kolding Windsurfing Klub
+	p mød os i klubhuset i Rebæk 
+		a.btn.btn-primary.btn-large(data-toggle="modal", href="#newMemberModal") Bliv medlem
+
+#newMemberModal.modal.hide.fade
+	.modal-header
+		a.close(data-dismiss="modal") x
+		h2 Bliv medlem af KWK
+	.modal-body
+		!= include('./about/_new-member-content')
+	.modal-footer
+		a.btn(href="#", data-dismiss="modal") Luk
+
+// TODO: make webcam work
+//- .row
+	.span6
+		h2 Det gik du glip af ...
+		.thumbnail
+			#5723049476210558801.slideshow
+
+	.span6
+		h2 Live webcam
+			small Hold øje med hvem der er på vandet.
+		.thumbnail
+			img(alt="Webcam fra klubhuset", src="http://guest:guest@cam.kwk.dk/video2.mjpg")
+
+
+.row(style="margin-top: 1em")
+	.span12
+		ul.thumbnails.frontpage-boxes
+			li.span3
+				.thumbnail
+					a(href="/page/weather", title="Vind og vejr")
+						img(src="http://servlet.dmi.dk/bv/servlet/bvImage?stat=1627&param=wind",
+							title="Vindmåling fra Kolding windsurfing klubs vejrstation")
+					.caption
+						h5 Live vind måling fra klubhuset
+						p Vindmåling fra Kolding windsurfing klubs vejrstation
+
+			li.span3
+				.thumbnail
+					a(href="http://www.facebook.com/groups/17993003105")
+						img(alt="", src="/images/kwk-facebook.png")
+					.caption
+						h5 Facebook gruppe
+						p Meld dig ind i 
+							a(href="http://www.facebook.com/groups/17993003105") kwk's facebook gruppe
+							, så du kan følge med i hvor der skal sejles, hvem der tager afsted, hvem der har udstyr til salg osv.
+			li.span3
+				.thumbnail
+					//<iframe width="209" height="142" src="http://www.youtube.com/embed/PMVe48-Vn-g" frameborder="0" allowfullscreen></iframe>
+					a(href="http://www.youtube.com/user/Koldingwindsurfklub?ob=0&feature=results_main")
+						img(alt="", src="/images/kwk-youtube.png")
+					.caption
+						h5 Youtube kanal
+						p Se videoer fra klubben på vores 
+							a(href="http://www.youtube.com/user/Koldingwindsurfklub?ob=0&feature=results_main") youtube kanal
+							.
+
+			li.span3
+				.thumbnail
+					a(href="http://dl.dropbox.com/u/65342965/www/KWKbrochure.pdf", target="_blank")
+						img(alt="", src="http://dl.dropbox.com/u/65342965/www/folder_small.png")
+
+					.caption
+						h5 KWK Info folder
+						p Print vores 
+							a(href="http://dl.dropbox.com/u/65342965/KWKbrochure.pdf", target="_blank") folder om Kolding Windsurfing Klub
+							|  , og giv den til dine venner.
+
+.row
+	.span6
+		h2 Klubhuset ved Rebæk strand
+		p
+			.thumbnail
+				<iframe title="Include gadget (iframe)" width="100%" height="300" scrolling="no" frameborder="0" id="1415726414" name="1415726414" allowtransparency="true" class="igm" src="//mj89sp3sau2k7lj1eg3k40hkeppguj6j-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=http://www.gstatic.com/sites-gadgets/iframe/iframe.xml&amp;container=enterprise&amp;view=default&amp;lang=da&amp;country=ALL&amp;sanitize=0&amp;v=add38c3e3c7f8aad&amp;libs=core&amp;mid=94&amp;parent=http://new.kwk.dk/#up_scroll=no&amp;up_iframeURL=http://www.google.com/uds/modules/elements/mapselement/iframe.html?maptype%3Dhybrid%26latlng%3D55.486755%252C9.526214%26mlatlng%3D55.486755%252C9.526214%26maddress1%3DStranden%26maddress2%3D6000%2520Kolding%252C%2520Denmark%26zoom%3D17%26mtitle%3DKolding%2520Windsurfing%2520Klub&amp;st=e%3DAIHE3cD91hZ%252BDBK9s4u2tPVMtAHK8vK09fq1xs2qNQEKo7xJ5TAgwcHgDQ8Od1emjGjdxFAVvbgaois9C6rLqf2jG0svqRuNaojKKDQsynl1duxJ4MDLycg5JinO9UoIwAI2Ih3fZ6zi%26c%3Denterprise&amp;rpctoken=-3848517173926548416"></iframe>
+
+		h2#calender Det sker i KWK
+		p
+			.thumbnail
+				<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=300&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=uh2iel1o8bksenmmqa0qfa4hok%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=Europe%2FCopenhagen" style=" border-width:0 " width="100%" height="300" frameborder="0" scrolling="no"></iframe>
+		p
+			a.btn.btn-primary(data-toggle="modal", href="#smartphoneModal") &raquo;KWK-kalender-smartphone-guide&laquo;
+		#smartphoneModal.modal.hide.fade
+			.modal-header
+				a.close(data-dismiss="modal") x
+				h2 &raquo;KWK-kalender-smartphone-guide&laquo;
+			.modal-body
+				p Sådan får du Kolding Windsurfing Klubs arrangementskalender på din smartphone, så den opdaterer helt automatisk :-)
+				p
+					span.label.label-info Google konto krævet
+					|  Du skal have et login til google for at kunne abonnere på arrangementskalenderen.
+				ol
+					li Log ind på din google konto / gmail på din computer.
+					li Åbn KWKs hjemmedside og klik på + i bunden af kalenderen, for at tilføje til din kalender.
+					li Klik OK til at tilføje til din google kalender.
+						| Nu opdateres KWK kalenderen helt automatisk med din google kalender på din computer.
+					li Indstil din smartphone til at bruge din google konto.
+					li Vælg KWK kalender i instillingerne for kalenderen på din smartphone
+				p Nu vises alle dine egne google begivenheder, side om side med begivenheder fra KWK helt automatisk :-)
+
+			.modal-footer
+				a.btn(href="#", data-dismiss="modal") Luk
+
+
+	.span6
+		h2 Velkommen i Kolding Windsurfing Klub
+		p.
+			Kolding Windsurfing Klub blev stiftet i 1992. Det har siden klubbens start, været vort formål at udbrede sporten
+			og fordre unge talenter. Surfskolens dygtige DS uddannede instruktører, underviser over 100 elever hver
+			sommer, det vil sige at vi stadig er en af de førende surfskoler i landet. Vi har Klubaften med surfskole 2 gange
+			ugentligt i sommerhalvåret, hvor elever i alle aldersklasser, begyndere som øvede, bliver undervist efter Dansk
+			Sejlunion’ s surfskole kursussæt windsurfer 1 og windsurfer 2.
+			Hvis du er i tvivl om windsurfing er noget for dig, så kom forbi klubben på klubaften, hvor du gratis kan prøve at
+			windsurfe 1. gang.
+			Hele sommeren er fyldt med aktiviteter i Kolding windsurfing klub, og medlemmerne må også bruge klubbens
+			område på andre dage end på klubaftener.
+
+		h2 I samarbejde med Dansk Sejlunion
+		p.
+			Kolding Windsurfing Klub er medlem af Dansk Sejlunion og har et årelangt samarbejde, specielt målrettet
+			mod aktiviteter og tilbud til børn og unge. Og blev i 2007, som første windsurfing klub i Danmark,
+			af Dansk Sejlunion udnævnt til Ungdomsvenlig Sejlklub, samt i 2011-2012 udvalgt som eneste windsurfing klub,
+			i et strategisk projekt, med fokus på fastholdelse af unge mellem 16-25 år. Projektet kaldes et Fyrtårnsprojekt
+			og Kolding windsurfing klub er sammen med 4 sejlklubber, med til at vise vejen for sejlsporten i Danmark.
+		h2 Surfskole
+		p Der foregår altid spændende aktiviteter i surfskolen. KWK tilbyde for øjeblikket tre forskellige hold.
+
+		//- TODO vis kursusbeskrivelserne i en facebox
+		p 
+			a(href="/page/activities", title="Surfskole - den blå legeplads").label.label-info Den blå legeplads
+			|  Er stedet hvor de mindste kan prøver kræfter med havet sammen med deres forældre.
+		p
+			a(href="/page/activities", title="Surfskole - Windsurfer 1").label.label-success Begynderkursus
+			|  Er for dig der lige er startet på windsurfing.
+		p 
+			a(href="/page/activities", title="Surfskole - Windsurfer 2").label.label-warning Videregående
+			|  Er træning for dig der allerede har gennemgået begynderkursus og har mod på at lære mere.
+
+

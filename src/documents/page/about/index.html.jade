@@ -2,8 +2,30 @@
 layout: default
 ---
 
-p about
+.row
+	.span12
+		ul.nav.nav-pills
+			li.active: a(href="#history", data-toggle="tab") Generel information
+			li: a(href="#contacts", data-toggle="tab") Kontaktinformation
+			li: a(href="#vedtaegter", data-toggle="tab") Vedtægter
 
-h1 History comes here...
+		.tab-content
+			#history.tab-pane.active
+				!= include('./_history')
 
-!= include('./_history')
+			#contacts.tab-pane
+				.row
+					.span12
+						.page-header
+							h1 Kontaktinformation
+				.row
+					.span4
+						!= include('./_bestyrelse')
+					.span4
+						!= include('./_udvalg')
+					.span4
+						!= include('./_keyholders')
+
+			#vedtaegter.tab-pane
+				section
+					!= include('./_vedtaegter')
