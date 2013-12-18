@@ -1,6 +1,7 @@
 ---
 title: 'Forside'
 layout: default
+scriptExtra: /js/map-kwk.js
 ---
 
 //- TODO create a nice image header for the frontpage
@@ -19,19 +20,6 @@ layout: default
 		!= include('./about/_new-member-content')
 	.modal-footer
 		a.btn(href="#", data-dismiss="modal") Luk
-
-// TODO: make webcam work
-//- .row
-	.span6
-		h2 Det gik du glip af ...
-		.thumbnail
-			#5723049476210558801.slideshow
-
-	.span6
-		h2 Live webcam
-			small Hold øje med hvem der er på vandet.
-		.thumbnail
-			img(alt="Webcam fra klubhuset", src="http://guest:guest@cam.kwk.dk/video2.mjpg")
 
 
 .row(style="margin-top: 1em")
@@ -80,9 +68,8 @@ layout: default
 .row
 	.span6
 		h2 Klubhuset ved Rebæk strand
-		p
-			.thumbnail
-				<iframe title="Include gadget (iframe)" width="100%" height="300" scrolling="no" frameborder="0" id="1415726414" name="1415726414" allowtransparency="true" class="igm" src="//mj89sp3sau2k7lj1eg3k40hkeppguj6j-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=http://www.gstatic.com/sites-gadgets/iframe/iframe.xml&amp;container=enterprise&amp;view=default&amp;lang=da&amp;country=ALL&amp;sanitize=0&amp;v=add38c3e3c7f8aad&amp;libs=core&amp;mid=94&amp;parent=http://new.kwk.dk/#up_scroll=no&amp;up_iframeURL=http://www.google.com/uds/modules/elements/mapselement/iframe.html?maptype%3Dhybrid%26latlng%3D55.486755%252C9.526214%26mlatlng%3D55.486755%252C9.526214%26maddress1%3DStranden%26maddress2%3D6000%2520Kolding%252C%2520Denmark%26zoom%3D17%26mtitle%3DKolding%2520Windsurfing%2520Klub&amp;st=e%3DAIHE3cD91hZ%252BDBK9s4u2tPVMtAHK8vK09fq1xs2qNQEKo7xJ5TAgwcHgDQ8Od1emjGjdxFAVvbgaois9C6rLqf2jG0svqRuNaojKKDQsynl1duxJ4MDLycg5JinO9UoIwAI2Ih3fZ6zi%26c%3Denterprise&amp;rpctoken=-3848517173926548416"></iframe>
+		#map_canvas
+	
 
 		h2#calender Det sker i KWK
 		p
