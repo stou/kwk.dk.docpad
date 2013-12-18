@@ -16,15 +16,11 @@ docpadConfig = {
 		# Specify some site properties
 		site:
 			# The production url of our website
-			#url: "http://kwk.dk"
-			url: 'http://stou-nodejs.herokuapp.com'
+			url: "http://www.kwk.dk"
 
 			# Here are some old site urls that you would like to redirect from
-			# oldUrls: [
-			# 	'www.kwk.dk',
-			# 	'stou-nodejs.herokuapp.com'
-			# ]
 			oldUrls: [
+				'kwk.dk',
 			]
 
 			# The default title of our website
