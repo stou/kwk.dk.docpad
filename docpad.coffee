@@ -16,37 +16,41 @@ docpadConfig = {
 		# Specify some site properties
 		site:
 			# The production url of our website
-			url: "http://website.com"
+			url: "http://kwk.dk"
 
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [
-				'www.website.com',
-				'website.herokuapp.com'
+				'www.kwk.dk',
+				'stou-nodejs.herokuapp.com'
 			]
 
 			# The default title of our website
-			title: "Your Website"
+			title: "Kolding Windsurfing Klub"
+
+			# The author of the site
+			author: "Rasmus Stougaard"
 
 			# The website description (for SEO)
 			description: """
-				When your website appears in search results in say Google, the text here will be shown underneath your website's title.
+				Kolding Windsurfing Klub blev stiftet i 1992. Det har siden klubbens start, været vort formål at udbrede sporten og fordre unge talenter. Surfskolens dygtige DS uddannede instruktører, underviser over 100 elever hver sommer, det vil sige at vi stadig er en af de førende surfskoler i landet. Vi har Klubaften med surfskole 2 gange ugentligt i sommerhalvåret, hvor elever i alle aldersklasser, begyndere som øvede, bliver undervist efter Dansk Sejlunion’ s surfskole kursussæt windsurfer 1 og windsurfer 2. Hvis du er i tvivl om windsurfing er noget for dig, så kom forbi klubben på klubaften, hvor du gratis kan prøve at windsurfe 1. gang. Hele sommeren er fyldt med aktiviteter i Kolding windsurfing klub, og medlemmerne må også bruge klubbens område på andre dage end på klubaftener.
 				"""
 
 			# The website keywords (for SEO) separated by commas
 			keywords: """
-				place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
+				Windsurfing, surf, SUP, stand up paddle, Kolding, surfskole, instruktion, den blå lejeplads
 				"""
 
 			# The website's styles
 			styles: [
 				'css/style.css'
+				'js/google-code-prettify/prettify.css'
+				'/css/jquery.googleslides.css'
 			]
 
 			# The website's scripts
 			scripts: [
 				# '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'
 				'js/plugins.js'
-				'js/main.js'
 			]
 
 
@@ -74,6 +78,8 @@ docpadConfig = {
 			# Merge the document keywords with the site keywords
 			@site.keywords.concat(@document.keywords or []).join(', ')
 
+		getPreparedSiteAuthor: -> 
+			@site.author
 
 	# =================================
 	# DocPad Events
