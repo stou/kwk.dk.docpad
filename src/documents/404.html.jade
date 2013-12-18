@@ -1,9 +1,13 @@
+---
+title: Page not found :(
+---
+
 doctype
 html(lang="en")
 	head
 	meta(charset="utf-8")
 	title
-		|Page not found :(
+		!=getPreparedTitle()
 	style.
 		::-moz-selection {
 			background: #b3d4fc;
