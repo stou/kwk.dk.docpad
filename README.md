@@ -1,5 +1,5 @@
-# [HTML5 Boilerplate](http://html5boilerplate.com/), [Jade](http://jade-lang.com) and [Less](http://lesscss.org) skeleton for [DocPad](https://github.com/bevry/docpad)
-Bare essentials for building a modern website with best practices using jade and less. livereload used to aid development.
+# kwk.dk website
+Built with docpad using using jade and less. Livereload used to aid development.
 
 
 ## Getting Started
