@@ -20,9 +20,11 @@ docpadConfig = {
 			url: 'http://stou-nodejs.herokuapp.com'
 
 			# Here are some old site urls that you would like to redirect from
+			# oldUrls: [
+			# 	'www.kwk.dk',
+			# 	'stou-nodejs.herokuapp.com'
+			# ]
 			oldUrls: [
-				'www.kwk.dk',
-				'stou-nodejs.herokuapp.com'
 			]
 
 			# The default title of our website
