@@ -42,15 +42,16 @@ docpadConfig = {
 
 			# The website's styles
 			styles: [
-				'css/style.css'
-				'js/google-code-prettify/prettify.css'
+				'/css/style.css'
+				'/js/google-code-prettify/prettify.css'
 				'/css/jquery.googleslides.css'
 			]
 
 			# The website's scripts
 			scripts: [
 				# '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'
-				'js/plugins.js'
+				'/js/vendor/modernizr-2.6.2.min.js'
+				'/js/plugins.js'
 			]
 
 
