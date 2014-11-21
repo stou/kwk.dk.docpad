@@ -76,18 +76,20 @@ html
 
 
 		.container
-			#main-content-wrapper.row.span12
+			.row
+				#main-content-wrapper.span12
 				!= content
 				
-			.row.span12
-				.footer
-					.well
-						address.kwk-address
-							strong Kolding Windsurfing Klub
-							br
-							| Stranden 63, Rebæk
-							br
-							| 6000 Kolding
+			.row
+				.span12
+					.footer
+						.well
+							address.kwk-address
+								strong Kolding Windsurfing Klub
+								br
+								| Stranden 63, Rebæk
+								br
+								| 6000 Kolding
 
 
 		//- Le javascript. Placed at the end of the document so the pages load faster 
