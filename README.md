@@ -1,3 +1,10 @@
+# Deprecated
+
+This repo is no longer used.
+I have switched to using harp and githubpages.
+The replacement website can be found here:
+<http://github.com/kwksurf/kwksurf.github.io>
+
 # kwk.dk website
 Built with docpad using using jade and less. Livereload used to aid development.
 
